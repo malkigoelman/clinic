@@ -1,5 +1,6 @@
+using Mirpaha.Clinic.Data;
 
-namespace Mirpaha
+namespace Mirpaha.Clinic.API
 {
     public class Program
     {
@@ -13,7 +14,8 @@ namespace Mirpaha
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.Services.AddSingleton<DataContext>();
+            //להוסיף כאן
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

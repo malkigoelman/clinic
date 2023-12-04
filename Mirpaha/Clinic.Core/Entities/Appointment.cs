@@ -2,6 +2,14 @@
 {
     public class Appointment
     {
+        private static int id = 1;
+        public Appointment( int doctorId, int clientId)
+        {
+            Id = id++;
+            DoctorId = doctorId;
+            ClientId = clientId;
+        }
+
         public int Id { get; set; }
         public int DoctorId { get; set; }
         public int ClientId { get; set; }
